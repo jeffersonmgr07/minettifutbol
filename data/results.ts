@@ -44,6 +44,33 @@ export const firstDateResults: TournamentResult[] = [
   { id: "res-20", calendarEventId: "cal-20", dateLabel: "17 DE MAYO FECHA 1", round: 1, field: "CAMPO 3", time: "14:50", categoryId: "sub10", categoryLabel: "SUB 10 (A)", group: "GRUPO A", home: "FOVA", away: "RENACE JUVENTUD", homeScore: 1, awayScore: 5, status: "jugado", resultType: "normal" },
 ];
 
+export const secondDateResults: TournamentResult[] = [
+  { id: "res-21", calendarEventId: "cal-25", dateLabel: "24 DE MAYO FECHA 2", round: 2, field: "CAMPO 1", time: "09:00", categoryId: "sub6", categoryLabel: "SUB 6", group: "Único", home: "RENACE JUVENTUD", away: "GUERREROS DE MANCHAY", homeScore: 1, awayScore: 0, status: "jugado", resultType: "normal" },
+  { id: "res-22", calendarEventId: "cal-26", dateLabel: "24 DE MAYO FECHA 2", round: 2, field: "CAMPO 1", time: "09:40", categoryId: "sub6", categoryLabel: "SUB 6", group: "Único", home: "TOLENTINO FC", away: "BENJAMIN FC", homeScore: 1, awayScore: 2, status: "jugado", resultType: "normal" },
+  { id: "res-23", calendarEventId: "cal-27", dateLabel: "24 DE MAYO FECHA 2", round: 2, field: "CAMPO 1", time: "10:20", categoryId: "sub6", categoryLabel: "SUB 6", group: "Único", home: "JM SPORT", away: "CLUB DEPORTIVO LARA", homeScore: 0, awayScore: 2, status: "jugado", resultType: "normal" },
+  { id: "res-24", calendarEventId: "cal-28", dateLabel: "24 DE MAYO FECHA 2", round: 2, field: "CAMPO 1", time: "11:00", categoryId: "sub8", categoryLabel: "SUB 8 (A)", group: "GRUPO A", home: "JM SPORT", away: "DREAM TEAM", homeScore: 4, awayScore: 0, status: "jugado", resultType: "normal" },
+
+  { id: "res-25", calendarEventId: "cal-29", dateLabel: "24 DE MAYO FECHA 2", round: 2, field: "CAMPO 2", time: "09:00", categoryId: "sub8", categoryLabel: "SUB 8 (A)", group: "GRUPO A", home: "TOLENTINO FC", away: "RENACE JUVENTUD", homeScore: 2, awayScore: 4, status: "jugado", resultType: "normal" },
+  { id: "res-26", calendarEventId: "cal-30", dateLabel: "24 DE MAYO FECHA 2", round: 2, field: "CAMPO 2", time: "09:40", categoryId: "sub8", categoryLabel: "SUB 8 (B)", group: "GRUPO B", home: "MATHE SPORT", away: "REMANENTE FC", homeScore: 2, awayScore: 5, status: "jugado", resultType: "normal" },
+  { id: "res-27", calendarEventId: "cal-31", dateLabel: "24 DE MAYO FECHA 2", round: 2, field: "CAMPO 2", time: "10:20", categoryId: "sub8", categoryLabel: "SUB 8 (B)", group: "GRUPO B", home: "BENJAMIN FC", away: "GUERREROS DE MANCHAY", homeScore: 0, awayScore: 6, status: "jugado", resultType: "normal" },
+  { id: "res-28", calendarEventId: "cal-32", dateLabel: "24 DE MAYO FECHA 2", round: 2, field: "CAMPO 2", time: "11:00", categoryId: "sub8", categoryLabel: "SUB 8 (A)", group: "GRUPO A", home: "FOVA", away: "JYB", homeScore: 2, awayScore: 0, status: "jugado", resultType: "normal" },
+  { id: "res-29", calendarEventId: "cal-33", dateLabel: "24 DE MAYO FECHA 2", round: 2, field: "CAMPO 2", time: "12:00", categoryId: "sub10", categoryLabel: "SUB 10 (B)", group: "GRUPO B", home: "GUERREROS DE MANCHAY", away: "TALENTOS UNIDOS", homeScore: 2, awayScore: 1, status: "jugado", resultType: "normal" },
+  { id: "res-30", calendarEventId: "cal-34", dateLabel: "24 DE MAYO FECHA 2", round: 2, field: "CAMPO 2", time: "12:50", categoryId: "sub10", categoryLabel: "SUB 10 (B)", group: "GRUPO B", home: "VASQUEZ FC", away: "JM SPORT", homeScore: 2, awayScore: 3, status: "jugado", resultType: "normal" },
+  { id: "res-31", calendarEventId: "cal-35", dateLabel: "24 DE MAYO FECHA 2", round: 2, field: "CAMPO 2", time: "13:40", categoryId: "sub10", categoryLabel: "SUB 10 (A)", group: "GRUPO A", home: "BENJAMIN FC", away: "REMANENTE FC", homeScore: 0, awayScore: 5, status: "jugado", resultType: "normal" },
+  { id: "res-32", calendarEventId: "cal-36", dateLabel: "24 DE MAYO FECHA 2", round: 2, field: "CAMPO 2", time: "14:30", categoryId: "sub10", categoryLabel: "SUB 10 (A)", group: "GRUPO A", home: "FOVA", away: "TALENTOS DEL SUR", homeScore: 1, awayScore: 0, status: "jugado", resultType: "normal" },
+
+  { id: "res-33", calendarEventId: "cal-37", dateLabel: "24 DE MAYO FECHA 2", round: 2, field: "CAMPO 3", time: "09:00", categoryId: "sub12", categoryLabel: "SUB 12 (A)", group: "GRUPO A", home: "TOLENTINO FC", away: "FOVA", homeScore: 2, awayScore: 1, status: "jugado", resultType: "normal" },
+  { id: "res-34", calendarEventId: "cal-38", dateLabel: "24 DE MAYO FECHA 2", round: 2, field: "CAMPO 3", time: "09:50", categoryId: "sub10", categoryLabel: "SUB 10 (B)", group: "GRUPO B", home: "DREAM TEAM", away: "TOLENTINO FC", homeScore: 3, awayScore: 1, status: "jugado", resultType: "normal" },
+  { id: "res-35", calendarEventId: "cal-39", dateLabel: "24 DE MAYO FECHA 2", round: 2, field: "CAMPO 3", time: "10:40", categoryId: "sub10", categoryLabel: "SUB 10 (A)", group: "GRUPO A", home: "MATHE SPORT", away: "RENACE JUVENTUD", homeScore: 1, awayScore: 1, status: "jugado", resultType: "normal" },
+  { id: "res-36", calendarEventId: "cal-40", dateLabel: "24 DE MAYO FECHA 2", round: 2, field: "CAMPO 3", time: "11:30", categoryId: "sub12", categoryLabel: "SUB 12 (B)", group: "GRUPO B", home: "JM SPORT", away: "CLUB DEPORTIVO LARA", homeScore: 4, awayScore: 3, status: "jugado", resultType: "normal" },
+  { id: "res-37", calendarEventId: "cal-41", dateLabel: "24 DE MAYO FECHA 2", round: 2, field: "CAMPO 3", time: "12:20", categoryId: "sub12", categoryLabel: "SUB 12 (B)", group: "GRUPO B", home: "RENACE JUVENTUD", away: "FOVITA", homeScore: 1, awayScore: 5, status: "jugado", resultType: "normal" },
+  { id: "res-38", calendarEventId: "cal-42", dateLabel: "24 DE MAYO FECHA 2", round: 2, field: "CAMPO 3", time: "13:10", categoryId: "sub12", categoryLabel: "SUB 12 (A)", group: "GRUPO A", home: "GUERREROS DE MANCHAY", away: "BENJAMIN FC", homeScore: 2, awayScore: 0, status: "jugado", resultType: "normal" },
+  { id: "res-39", calendarEventId: "cal-43", dateLabel: "24 DE MAYO FECHA 2", round: 2, field: "CAMPO 3", time: "14:00", categoryId: "sub12", categoryLabel: "SUB 12 (A)", group: "GRUPO A", home: "MATHE SPORT", away: "SPORTING JF ONCE", homeScore: 0, awayScore: 7, status: "jugado", resultType: "normal" },
+  { id: "res-40", calendarEventId: "cal-44", dateLabel: "24 DE MAYO FECHA 2", round: 2, field: "CAMPO 3", time: "14:50", categoryId: "sub12", categoryLabel: "SUB 12 (B)", group: "GRUPO B", home: "TALENTOS UNIDOS", away: "DREAM TEAM", homeScore: 3, awayScore: 1, status: "jugado", resultType: "normal" },
+];
+
+export const tournamentResults: TournamentResult[] = [...firstDateResults, ...secondDateResults];
+
 function normalize(value: string | null | undefined) {
   return String(value ?? "")
     .normalize("NFD")
@@ -54,7 +81,7 @@ function normalize(value: string | null | undefined) {
 }
 
 export function getResultForCalendarEvent(eventId: string) {
-  return firstDateResults.find((result) => result.calendarEventId === eventId);
+  return tournamentResults.find((result) => result.calendarEventId === eventId);
 }
 
 export function getResultForFixtureMatch(match: {
@@ -64,7 +91,7 @@ export function getResultForFixtureMatch(match: {
   home: string;
   away?: string | null;
 }) {
-  return firstDateResults.find((result) =>
+  return tournamentResults.find((result) =>
     result.categoryId === match.categoryId &&
     result.group === match.group &&
     result.round === match.round &&
@@ -74,7 +101,7 @@ export function getResultForFixtureMatch(match: {
 }
 
 export function getLatestResults(limit = 6) {
-  return firstDateResults.slice(0, limit);
+  return tournamentResults.slice().reverse().slice(0, limit);
 }
 
 export function getStandingsRows(categoryId: string, groupName?: string) {
@@ -101,7 +128,7 @@ export function getStandingsRows(categoryId: string, groupName?: string) {
     ])
   );
 
-  for (const result of firstDateResults) {
+  for (const result of tournamentResults) {
     if (result.categoryId !== categoryId) continue;
     if (groupName && result.group !== groupName) continue;
 

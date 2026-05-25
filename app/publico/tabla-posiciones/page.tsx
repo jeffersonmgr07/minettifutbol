@@ -20,7 +20,7 @@ export default function StandingsPage() {
       <section className="mx-auto max-w-7xl px-5 py-10">
         <p className="text-sm font-bold uppercase tracking-wide text-emerald-700">Tabla de posiciones</p>
         <h1 className="text-4xl font-black">Clasificación actualizada</h1>
-        <p className="mt-3 text-slate-600">Tabla calculada con los resultados cargados de la Fecha 1. Los partidos por W.O. aplican la regla de 3 puntos al ganador y -3 al perdedor.</p>
+        <p className="mt-3 text-slate-600">Tabla calculada con los resultados cargados de la Fecha 1 y Fecha 2. Los partidos por W.O. aplican la regla de 3 puntos al ganador y -3 al perdedor.</p>
 
         <div className="my-8 grid gap-3 rounded-2xl bg-white p-4 shadow-sm md:grid-cols-2">
           <label className="text-sm font-bold">

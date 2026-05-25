@@ -39,7 +39,7 @@ export default function FixturePage() {
           <p className="text-sm font-bold uppercase tracking-wide text-emerald-700">Programación pública</p>
           <h1 className="text-4xl font-black">Fixture del campeonato</h1>
           <p className="mt-3 max-w-3xl text-slate-600">
-            La Fecha 1 ya muestra resultados transcritos desde la imagen enviada. La Fecha 2 y las demás jornadas quedan como programación pendiente.
+            La Fecha 1 y Fecha 2 ya muestran resultados cargados. Las siguientes jornadas quedan como programación pendiente.
           </p>
         </div>
 

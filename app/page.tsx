@@ -3,11 +3,11 @@ import PublicFooter from "@/components/public/PublicFooter";
 import MatchCard from "@/components/public/MatchCard";
 import StandingsTable from "@/components/public/StandingsTable";
 import { getCategoryName, tournamentData } from "@/data/tournament";
-import { firstDateResults, getStandingsRows } from "@/data/results";
+import { tournamentResults, getStandingsRows } from "@/data/results";
 
 export default function HomePage() {
   const scheduledMatches = tournamentData.calendarEvents
-    .filter((event) => event.status === "programado" && !firstDateResults.some((result) => result.calendarEventId === event.id))
+    .filter((event) => event.status === "programado" && !tournamentResults.some((result) => result.calendarEventId === event.id))
     .slice(0, 6);
 
   const summary = tournamentData.categories.map((category) => ({
@@ -17,7 +17,7 @@ export default function HomePage() {
   }));
 
   const standings = getStandingsRows("sub6").slice(0, 6);
-  const latestResults = firstDateResults.slice(0, 6);
+  const latestResults = tournamentResults.slice().reverse().slice(0, 6);
 
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
@@ -91,7 +91,7 @@ export default function HomePage() {
         <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
           <div>
             <p className="text-sm font-bold uppercase tracking-wide text-emerald-700">Resultados cargados</p>
-            <h2 className="text-3xl font-black">Fecha 1 · 17 de mayo</h2>
+            <h2 className="text-3xl font-black">Fechas 1 y 2</h2>
           </div>
           <a href="/publico/resultados" className="font-black text-emerald-700">Ver todos los resultados</a>
         </div>
@@ -122,7 +122,7 @@ export default function HomePage() {
         <div className="mb-6">
           <p className="text-sm font-bold uppercase tracking-wide text-emerald-700">Tabla actualizada</p>
           <h2 className="text-3xl font-black">Sub 6</h2>
-          <p className="mt-2 text-slate-500">Tabla calculada con los resultados cargados de la Fecha 1.</p>
+          <p className="mt-2 text-slate-500">Tabla calculada con los resultados cargados de la Fecha 1 y Fecha 2.</p>
         </div>
         <StandingsTable rows={standings} />
       </section>

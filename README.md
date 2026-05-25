@@ -84,3 +84,20 @@ La demo usa el padrón real cargado del equipo **GUERREROS DE MANCHAY - Sub 6** 
 - `data/results.ts`
 - `data/delegateMock.ts`
 - `public/images/resultados-fecha-1-17-mayo.jpeg`
+
+
+## Fotos de jugadores
+
+Para la demo de delegado, subir las fotos de los jugadores en formato PNG en esta ruta:
+
+```txt
+public/IMG/jugadores/
+```
+
+El archivo debe llamarse igual que el DNI del jugador:
+
+```txt
+public/IMG/jugadores/94768639.png
+```
+
+La web lo mostrará automáticamente en la nómina general.

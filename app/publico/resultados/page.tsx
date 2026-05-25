@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import PublicHeader from "@/components/public/PublicHeader";
 import PublicFooter from "@/components/public/PublicFooter";
 import MatchCard from "@/components/public/MatchCard";
-import { firstDateResults } from "@/data/results";
+import { tournamentResults } from "@/data/results";
 import { tournamentData } from "@/data/tournament";
 
 export default function ResultsPage() {
@@ -12,23 +12,23 @@ export default function ResultsPage() {
   const [field, setField] = useState("todos");
 
   const filteredResults = useMemo(() => {
-    return firstDateResults.filter((result) => {
+    return tournamentResults.filter((result) => {
       const categoryOk = categoryId === "todos" || result.categoryId === categoryId;
       const fieldOk = field === "todos" || result.field === field;
       return categoryOk && fieldOk;
     });
   }, [categoryId, field]);
 
-  const fields = Array.from(new Set(firstDateResults.map((result) => result.field)));
+  const fields = Array.from(new Set(tournamentResults.map((result) => result.field)));
 
   return (
     <main className="min-h-screen bg-slate-50">
       <PublicHeader />
       <section className="mx-auto max-w-7xl px-5 py-10">
         <p className="text-sm font-bold uppercase tracking-wide text-emerald-700">Resultados</p>
-        <h1 className="text-4xl font-black">Fecha 1 · 17 de mayo</h1>
+        <h1 className="text-4xl font-black">Fechas 1 y 2</h1>
         <p className="mt-3 max-w-3xl text-slate-600">
-          Resultados cargados desde la imagen de la programación enviada. El partido ganado por W.O. se muestra con marcador 2-0 para efectos de tabla.
+          Resultados cargados desde las imágenes de la Fecha 1 y Fecha 2. El partido ganado por W.O. se muestra con marcador 2-0 para efectos de tabla.
         </p>
 
         <div className="my-8 grid gap-3 rounded-2xl bg-white p-4 shadow-sm md:grid-cols-2">
@@ -74,8 +74,8 @@ export default function ResultsPage() {
           ))}
         </div>
 
-        <div className="mt-8 rounded-2xl bg-amber-50 p-5 text-sm font-bold text-amber-800">
-          Nota: el marcador VASQUEZ FC vs TALENTOS UNIDOS fue transcrito como 1 - 4 porque en la imagen se observa “01” para VASQUEZ FC. Revísalo si deseas dejarlo como 0 - 4.
+        <div className="mt-8 rounded-2xl bg-emerald-50 p-5 text-sm font-bold text-emerald-800">
+          Resultados actualizados hasta la Fecha 2 · 24 de mayo.
         </div>
       </section>
       <PublicFooter />
