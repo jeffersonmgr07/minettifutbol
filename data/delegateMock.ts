@@ -1,0 +1,53 @@
+export const delegateMockData = {
+  access: {
+    token: "demo-guerreros-sub6-fecha2",
+    role: "delegado",
+    delegateName: "Elvis Robles",
+    status: "simulacion",
+  },
+  team: {
+    id: "team-guerreros-sub6",
+    name: "GUERREROS DE MANCHAY",
+    clubDisplayName: "Guerreros Asociación",
+    categoryId: "sub6",
+    categoryName: "Sub 6",
+    group: "Único",
+    minRosterPlayers: 9,
+    maxRosterPlayers: 12,
+    playersOnField: 7,
+    minPlayersOnField: 5,
+    delegateName: "Elvis Robles",
+    delegatePhone: "980953566",
+    coachName: "Elvis Robles",
+    coachPhone: "980953566",
+    rosterSlots: 12,
+    registeredPlayers: 9,
+  },
+  match: {
+    id: "sub6-único-2-4",
+    categoryId: "sub6",
+    categoryName: "Sub 6",
+    group: "Único",
+    round: 2,
+    dateLabel: "Fecha 2",
+    date: "24 de mayo",
+    time: "09:00",
+    field: "Campo 1",
+    home: "RENACE JUVENTUD",
+    away: "GUERREROS DE MANCHAY",
+    status: "programado",
+  },
+  players: [
+    { id: "guerreros-sub6-01", number: 1, fullName: "Alexander Chanca Hernandez", dni: "94768639", birthDate: "2020-03-11", birthYear: 2020, photoUrl: "", status: "aprobado", qrCode: "QR-GUERREROS-SUB6-001" },
+    { id: "guerreros-sub6-02", number: 2, fullName: "Victor Francesco De la Cruz Mego", dni: "91972988", birthDate: "2020-08-15", birthYear: 2020, photoUrl: "", status: "aprobado", qrCode: "QR-GUERREROS-SUB6-002" },
+    { id: "guerreros-sub6-03", number: 3, fullName: "Liam Salcedo Mayta", dni: "92523349", birthDate: "2021-09-04", birthYear: 2021, photoUrl: "", status: "aprobado", qrCode: "QR-GUERREROS-SUB6-003" },
+    { id: "guerreros-sub6-04", number: 4, fullName: "Liam Darhiel Chacón Vallejos", dni: "92622043", birthDate: "2021-11-11", birthYear: 2021, photoUrl: "", status: "aprobado", qrCode: "QR-GUERREROS-SUB6-004" },
+    { id: "guerreros-sub6-05", number: 5, fullName: "Gianluca Aurelio Pariona Llanterguay", dni: "92695777", birthDate: "2021-01-04", birthYear: 2021, photoUrl: "", status: "aprobado", qrCode: "QR-GUERREROS-SUB6-005" },
+    { id: "guerreros-sub6-07", number: 7, fullName: "Hans Steven Quispe Goitia", dni: "91674980", birthDate: "2020-01-10", birthYear: 2020, photoUrl: "", status: "aprobado", qrCode: "QR-GUERREROS-SUB6-007" },
+    { id: "guerreros-sub6-08", number: 8, fullName: "Iker Joel Molleapaza Gutierrez", dni: "91903581", birthDate: "2020-06-23", birthYear: 2020, photoUrl: "", status: "aprobado", qrCode: "QR-GUERREROS-SUB6-008" },
+    { id: "guerreros-sub6-10", number: 10, fullName: "Dylan Caleb Yajahuanca Arones", dni: "91814200", birthDate: "2020-04-14", birthYear: 2020, photoUrl: "", status: "aprobado", qrCode: "QR-GUERREROS-SUB6-010" },
+    { id: "guerreros-sub6-11", number: 11, fullName: "Lucas Anuel Guevara Braco", dni: "92094647", birthDate: "2020-11-04", birthYear: 2020, photoUrl: "", status: "aprobado", qrCode: "QR-GUERREROS-SUB6-011" }
+  ],
+};
+
+export type DelegateMockPlayer = (typeof delegateMockData.players)[number];

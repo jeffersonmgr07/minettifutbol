@@ -20,6 +20,7 @@ export default function PublicHeader() {
           <a href="/publico/tabla-posiciones">Tablas</a>
           <a href="/publico/goleadores">Goleadores</a>
           <a href="/publico/equipos">Equipos</a>
+              <a href="/delegado">Demo delegado</a>
           <a href="/publico/bases">Bases</a>
         </nav>
 

@@ -238,3 +238,18 @@ insert into calendar_events (id,date_label,round_number,field,time_label,home_te
 insert into calendar_events (id,date_label,round_number,field,time_label,home_team,away_team,category_label,status) values ('cal-46','24 DE MAYO FECHA 2',2,NULL,NULL,'DESCANSA SPORTING JF ONCE SUB 10 (A)',NULL,NULL,'descansa') on conflict (id) do nothing;
 insert into calendar_events (id,date_label,round_number,field,time_label,home_team,away_team,category_label,status) values ('cal-47','24 DE MAYO FECHA 2',2,NULL,NULL,'DESCANSA JYB SUB 12 (A)',NULL,NULL,'descansa') on conflict (id) do nothing;
 insert into calendar_events (id,date_label,round_number,field,time_label,home_team,away_team,category_label,status) values ('cal-48','24 DE MAYO FECHA 2',2,NULL,NULL,'DESCANSA CACHORROS FC SUB 12 (B)',NULL,NULL,'descansa') on conflict (id) do nothing;
+
+-- AVANCE: resultados de Fecha 1 y padrón GUERREROS DE MANCHAY SUB 6.
+-- Estos inserts son referenciales para la futura conexión a Supabase/PostgreSQL.
+-- En esta versión, la app usa data/results.ts y data/delegateMock.ts como datos mock.
+
+-- Jugadores reales cargados en data/delegateMock.ts:
+-- Alexander Chanca Hernandez | DNI 94768639 | 2020-03-11
+-- Victor Francesco De la Cruz Mego | DNI 91972988 | 2020-08-15
+-- Liam Salcedo Mayta | DNI 92523349 | 2021-09-04
+-- Liam Darhiel Chacón Vallejos | DNI 92622043 | 2021-11-11
+-- Gianluca Aurelio Pariona Llanterguay | DNI 92695777 | 2021-01-04
+-- Hans Steven Quispe Goitia | DNI 91674980 | 2020-01-10
+-- Iker Joel Molleapaza Gutierrez | DNI 91903581 | 2020-06-23
+-- Dylan Caleb Yajahuanca Arones | DNI 91814200 | 2020-04-14
+-- Lucas Anuel Guevara Braco | DNI 92094647 | 2020-11-04

@@ -4,7 +4,8 @@ import { useMemo, useState } from "react";
 import PublicHeader from "@/components/public/PublicHeader";
 import PublicFooter from "@/components/public/PublicFooter";
 import StandingsTable from "@/components/public/StandingsTable";
-import { getStandingsRows, tournamentData } from "@/data/tournament";
+import { tournamentData } from "@/data/tournament";
+import { getStandingsRows } from "@/data/results";
 
 export default function StandingsPage() {
   const [categoryId, setCategoryId] = useState("sub6");
@@ -18,8 +19,8 @@ export default function StandingsPage() {
       <PublicHeader />
       <section className="mx-auto max-w-7xl px-5 py-10">
         <p className="text-sm font-bold uppercase tracking-wide text-emerald-700">Tabla de posiciones</p>
-        <h1 className="text-4xl font-black">Clasificación inicial</h1>
-        <p className="mt-3 text-slate-600">Todos los equipos inician en cero hasta registrar resultados validados por la organización.</p>
+        <h1 className="text-4xl font-black">Clasificación actualizada</h1>
+        <p className="mt-3 text-slate-600">Tabla calculada con los resultados cargados de la Fecha 1. Los partidos por W.O. aplican la regla de 3 puntos al ganador y -3 al perdedor.</p>
 
         <div className="my-8 grid gap-3 rounded-2xl bg-white p-4 shadow-sm md:grid-cols-2">
           <label className="text-sm font-bold">

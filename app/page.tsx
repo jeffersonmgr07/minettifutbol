@@ -2,11 +2,12 @@ import PublicHeader from "@/components/public/PublicHeader";
 import PublicFooter from "@/components/public/PublicFooter";
 import MatchCard from "@/components/public/MatchCard";
 import StandingsTable from "@/components/public/StandingsTable";
-import { getCategoryName, getStandingsRows, tournamentData } from "@/data/tournament";
+import { getCategoryName, tournamentData } from "@/data/tournament";
+import { firstDateResults, getStandingsRows } from "@/data/results";
 
 export default function HomePage() {
   const scheduledMatches = tournamentData.calendarEvents
-    .filter((event) => event.status === "programado")
+    .filter((event) => event.status === "programado" && !firstDateResults.some((result) => result.calendarEventId === event.id))
     .slice(0, 6);
 
   const summary = tournamentData.categories.map((category) => ({
@@ -16,6 +17,7 @@ export default function HomePage() {
   }));
 
   const standings = getStandingsRows("sub6").slice(0, 6);
+  const latestResults = firstDateResults.slice(0, 6);
 
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
@@ -84,11 +86,43 @@ export default function HomePage() {
         </div>
       </section>
 
+
+      <section className="mx-auto max-w-7xl px-5 pb-12">
+        <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-wide text-emerald-700">Resultados cargados</p>
+            <h2 className="text-3xl font-black">Fecha 1 · 17 de mayo</h2>
+          </div>
+          <a href="/publico/resultados" className="font-black text-emerald-700">Ver todos los resultados</a>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {latestResults.map((result) => (
+            <MatchCard
+              key={result.id}
+              category={result.categoryLabel}
+              group={result.group}
+              round={result.round}
+              dateLabel={result.dateLabel}
+              field={result.field}
+              time={result.time}
+              home={result.home}
+              away={result.away}
+              status={result.status}
+              homeScore={result.homeScore}
+              awayScore={result.awayScore}
+              resultType={result.resultType}
+              note={result.note}
+            />
+          ))}
+        </div>
+      </section>
+
       <section className="mx-auto max-w-7xl px-5 pb-14">
         <div className="mb-6">
-          <p className="text-sm font-bold uppercase tracking-wide text-emerald-700">Tabla inicial</p>
+          <p className="text-sm font-bold uppercase tracking-wide text-emerald-700">Tabla actualizada</p>
           <h2 className="text-3xl font-black">Sub 6</h2>
-          <p className="mt-2 text-slate-500">La tabla se actualizará cuando se registren resultados validados.</p>
+          <p className="mt-2 text-slate-500">Tabla calculada con los resultados cargados de la Fecha 1.</p>
         </div>
         <StandingsTable rows={standings} />
       </section>

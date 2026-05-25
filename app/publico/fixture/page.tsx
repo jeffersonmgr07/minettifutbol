@@ -5,6 +5,7 @@ import PublicHeader from "@/components/public/PublicHeader";
 import PublicFooter from "@/components/public/PublicFooter";
 import MatchCard from "@/components/public/MatchCard";
 import { getCategoryName, tournamentData } from "@/data/tournament";
+import { getResultForCalendarEvent, getResultForFixtureMatch } from "@/data/results";
 
 export default function FixturePage() {
   const [categoryId, setCategoryId] = useState("todos");
@@ -38,7 +39,7 @@ export default function FixturePage() {
           <p className="text-sm font-bold uppercase tracking-wide text-emerald-700">Programación pública</p>
           <h1 className="text-4xl font-black">Fixture del campeonato</h1>
           <p className="mt-3 max-w-3xl text-slate-600">
-            Las fechas 1 y 2 incluyen programación con día, campo y hora según el archivo de Excel. Las demás jornadas quedan cargadas como fixture por fecha deportiva.
+            La Fecha 1 ya muestra resultados transcritos desde la imagen enviada. La Fecha 2 y las demás jornadas quedan como programación pendiente.
           </p>
         </div>
 
@@ -77,36 +78,50 @@ export default function FixturePage() {
         <div className="mb-10">
           <h2 className="mb-4 text-2xl font-black">Programación con día, campo y hora</h2>
           <div className="grid gap-4 md:grid-cols-2">
-            {tournamentData.calendarEvents.map((event) => (
-              <MatchCard
-                key={event.id}
-                category={event.categoryLabel ?? undefined}
-                round={event.round}
-                dateLabel={event.dateLabel}
-                field={event.field}
-                time={event.time}
-                home={event.home}
-                away={event.away}
-                status={event.status}
-              />
-            ))}
+            {tournamentData.calendarEvents.map((event) => {
+              const result = getResultForCalendarEvent(event.id);
+              return (
+                <MatchCard
+                  key={event.id}
+                  category={event.categoryLabel ?? undefined}
+                  round={event.round}
+                  dateLabel={event.dateLabel}
+                  field={event.field}
+                  time={event.time}
+                  home={event.home}
+                  away={event.away}
+                  status={result?.status ?? event.status}
+                  homeScore={result?.homeScore}
+                  awayScore={result?.awayScore}
+                  resultType={result?.resultType}
+                  note={result?.note}
+                />
+              );
+            })}
           </div>
         </div>
 
         <div>
           <h2 className="mb-4 text-2xl font-black">Fixture completo por categoría y grupo</h2>
           <div className="grid gap-4 md:grid-cols-2">
-            {filteredMatches.map((match) => (
-              <MatchCard
-                key={match.id}
-                category={getCategoryName(match.categoryId)}
-                group={match.group}
-                round={match.round}
-                home={match.home}
-                away={match.away}
-                status={match.status}
-              />
-            ))}
+            {filteredMatches.map((match) => {
+              const result = getResultForFixtureMatch(match);
+              return (
+                <MatchCard
+                  key={match.id}
+                  category={getCategoryName(match.categoryId)}
+                  group={match.group}
+                  round={match.round}
+                  home={match.home}
+                  away={match.away}
+                  status={result?.status ?? match.status}
+                  homeScore={result?.homeScore}
+                  awayScore={result?.awayScore}
+                  resultType={result?.resultType}
+                  note={result?.note}
+                />
+              );
+            })}
           </div>
         </div>
       </section>

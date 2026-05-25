@@ -51,3 +51,36 @@ http://localhost:3000
 - Partidos del fixture: 118
 - Descansos registrados: 26
 - Eventos con fecha/hora/campo desde el Excel: 48
+
+## Nueva demo de delegado
+
+- `/delegado` Demo de acceso único para delegado con selección de jugadores para partido.
+
+## Avance cargado
+
+### Fecha 1 - 17 de mayo
+
+Se cargaron los resultados de la primera fecha desde la imagen enviada por la organización.
+
+Rutas actualizadas:
+
+- `/`
+- `/publico/fixture`
+- `/publico/resultados`
+- `/publico/tabla-posiciones`
+
+### Demo delegado
+
+Ruta:
+
+```txt
+/delegado
+```
+
+La demo usa el padrón real cargado del equipo **GUERREROS DE MANCHAY - Sub 6** para simular la convocatoria del partido de Fecha 2 contra **RENACE JUVENTUD**.
+
+### Archivos de datos agregados
+
+- `data/results.ts`
+- `data/delegateMock.ts`
+- `public/images/resultados-fecha-1-17-mayo.jpeg`
