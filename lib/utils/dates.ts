@@ -1,3 +1,1 @@
-export function getBirthYear(date: string) {
-  return new Date(date).getFullYear();
-}
+export function getBirthYear(date: string) { return new Date(date).getFullYear(); }

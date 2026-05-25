@@ -1,6 +1,7 @@
 type Row = {
   position: number;
   team: string;
+  group?: string;
   pj: number;
   pg: number;
   pe: number;
@@ -13,12 +14,13 @@ type Row = {
 
 export default function StandingsTable({ rows }: { rows: Row[] }) {
   return (
-    <div className="overflow-hidden rounded-2xl bg-white shadow">
-      <table className="w-full border-collapse text-sm">
+    <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <table className="w-full min-w-[760px] border-collapse text-sm">
         <thead className="bg-emerald-800 text-white">
           <tr>
             <th className="p-3 text-left">Pos</th>
             <th className="p-3 text-left">Equipo</th>
+            <th className="p-3">Grupo</th>
             <th className="p-3">PJ</th>
             <th className="p-3">PG</th>
             <th className="p-3">PE</th>
@@ -31,9 +33,10 @@ export default function StandingsTable({ rows }: { rows: Row[] }) {
         </thead>
         <tbody>
           {rows.map((row) => (
-            <tr key={row.position} className="border-b last:border-b-0">
+            <tr key={`${row.group}-${row.team}`} className="border-b last:border-b-0">
               <td className="p-3 font-black">{row.position}</td>
               <td className="p-3 font-bold">{row.team}</td>
+              <td className="p-3 text-center text-slate-500">{row.group}</td>
               <td className="p-3 text-center">{row.pj}</td>
               <td className="p-3 text-center">{row.pg}</td>
               <td className="p-3 text-center">{row.pe}</td>

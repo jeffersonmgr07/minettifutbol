@@ -1,1 +1,3 @@
--- Políticas RLS de Supabase pendientes.
+-- Políticas RLS pendientes de activar cuando se configure Supabase Auth.
+-- Recomendación: acceso público solo para fixture/resultados/tablas.
+-- Acceso privado por roles para jugadores, DNI, fotos, convocatorias y actas.

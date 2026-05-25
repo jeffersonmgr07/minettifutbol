@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
+import { tournamentData } from "@/data/tournament";
 
 export async function GET() {
   return NextResponse.json({
     module: "actas",
     status: "ok",
-    message: "API inicial de actas",
+    tournament: tournamentData.tournament.name,
   });
 }

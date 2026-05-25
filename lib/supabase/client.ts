@@ -1,4 +1,1 @@
-export function createSupabaseClient() {
-  // Pendiente: configurar cliente de Supabase.
-  return null;
-}
+export function createSupabaseClient() { return null; }

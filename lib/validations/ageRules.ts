@@ -1,3 +1,3 @@
-export function isValidBirthYearForCategory(birthYear: number, minBirthYear: number) {
-  return birthYear >= minBirthYear;
+export function isValidBirthYearForCategory(birthYear: number, minBirthYear: number, maxBirthYear: number) {
+  return birthYear >= minBirthYear && birthYear <= maxBirthYear;
 }

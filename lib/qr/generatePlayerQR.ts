@@ -1,3 +1,1 @@
-export function generatePlayerQR(playerId: string) {
-  return `player:${playerId}`;
-}
+export function generatePlayerQR(playerId: string) { return `player:${playerId}`; }
