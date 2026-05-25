@@ -1,0 +1,1 @@
+-- Políticas RLS de Supabase pendientes.
